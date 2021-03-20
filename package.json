@@ -1,0 +1,19 @@
+{
+  "name": "formulario",
+  "version": "1.0.0",
+  "description": "formulário simples com API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagoharumitsukodama/formulario.git"
+  },
+  "author": "Tiago Kodama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagoharumitsukodama/formulario/issues"
+  },
+  "homepage": "https://github.com/tiagoharumitsukodama/formulario#readme"
+}
