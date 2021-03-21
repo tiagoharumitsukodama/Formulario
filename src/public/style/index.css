@@ -1,5 +1,6 @@
 @import './conteiners/conteiner_apresentacao.css';
 @import './conteiners/conteiner_formulario.css';
+@import './conteiners/container_tabela.css';
 
 * {
     padding: 0px;
@@ -8,6 +9,9 @@
 
 body {
     background: #0F88F9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
