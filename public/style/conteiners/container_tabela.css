@@ -1,0 +1,42 @@
+div.containerTabela {
+    margin: 10vh 10vw auto;
+    padding: 2vh 2vw;
+
+    max-width: 70vw;
+    min-width: 50vw;
+    min-height: 50vh;
+
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 5px;
+
+    background-color: ivory;
+}
+
+table {
+    width: 98%;
+    height: fit-content;
+    margin: 0px auto;
+
+    background-color: rgba(228, 228, 228, 0.493);
+}
+
+table > * {
+    margin: 5px;
+    height: 1.2rem;
+}
+
+th {
+    background-color: rgba(40, 243, 40, 0.281);
+    color: rgb(48, 48, 48);
+    width: 33.33%;
+}
+
+tr {
+    background-color: rgba(121, 121, 121, 0.76);
+    width: 33.33%;
+}
+
+tr:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.76);
+
+}
