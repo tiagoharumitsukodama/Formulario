@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+div#apresentacao {
+    max-width: 500px;
+    height: auto;
+
+    animation: desaparecer 3s forwards; 
+}
+
+@keyframes desaparecer {
+    from {opacity: 1.0;}
+    to {opacity: 0.88;}
+  }
+
+div#apresentacao > img {
+    width: 95%;
+    height: auto;
+
+    border-radius: 182.5px;
+}
+
+div#apresentacao > p {
+    font-family: 'Roboto', sans-serif;    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 84px;
+    
+    color: #FAFAFA;
+}
