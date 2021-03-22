@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/src/public'));
 app.use(express.static(__dirname + '/src/views'));
 app.use('/', teste);
 app.use(express.urlencoded({extended: false}))
-
+/*
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
@@ -53,7 +53,7 @@ const elemento2 = new tabela({
 elemento1.save( () =>  console.log('salvando1'))
 elemento2.save( () =>  console.log('salvando2'))
 
-
+*/
 app.listen(port, () => {
     console.log('Ouvindo')
 })
