@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="/style/index.css">
+    <script src="/script/index.js" defer></script>
 
 </head>
 <body>
@@ -16,20 +17,20 @@
         </div>
         <div class="containerInterno">
             <div class="conteinerFormulario">
-                <form>
+                <form action="/" method="POST">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
                     <label for="telefone">Telefone/Celular:</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="(xx) 9 xxxx-xxxx">
+                    <input type="text" name="telefone" id="telefone" placeholder="(xx) 9 xxxx-xxxx" required>
                     <label for="cep">CEP:</label>
-                    <input type="text" name="cep" id="cep" placeholder="xxxxx-xxx">
+                    <input type="text" name="cep" id="cep" placeholder="xxxxx-xxx" required>
                     <label for="bairro">Bairro:</label>
-                    <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
                     <label for="rua">Rua:</label>
-                    <input type="text" name="rua" id="rua" placeholder="Rua">
+                    <input type="text" name="rua" id="rua" placeholder="Rua" required>
                     <div>
-                        <input type="text" name="numero" id="numero" placeholder="Nº">
-                        <input type="text" name="complemento" id="complemento" placeholder="Complemento">
+                        <input type="text" name="numero" id="numero" placeholder="Nº" required>
+                        <input type="text" name="complemento" id="complemento" placeholder="Complemento" required>
                     </div>
                     <input type="submit" value="Enviar" style="height:2rem;background: rgba(231, 195, 12, 0.527);">
                 </form>
