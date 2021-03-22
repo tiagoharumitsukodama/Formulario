@@ -1,3 +1,5 @@
+//const testModel = require('../models/userModel')
+
 var express = require('express')
 var router = express.Router()
 
