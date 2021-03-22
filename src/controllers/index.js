@@ -1,6 +1,6 @@
 
 
-exports.callback_teste = function (req, res) {
+exports.callback_index = function (req, res) {
     res.sendFile( __dirname + '/index.html')
 
     console.log(req.body)

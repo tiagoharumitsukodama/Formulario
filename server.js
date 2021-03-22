@@ -7,15 +7,13 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
-const teste = require('./src/routes/routesTeste')
+const index = require('./src/routes/index')
 
-const controllerDB = require('./src/controllers/controllerTeste')
 
 app.use(express.static(__dirname + '/src/public'));
 app.use(express.static(__dirname + '/src/views'));
-app.use('/', teste);
+app.use('/', index);
 app.use(express.urlencoded({extended: false}))
-app.post('/', controllerDB.callBack_cadastrarInformacoes);
 
 
 app.listen(port, () => {
