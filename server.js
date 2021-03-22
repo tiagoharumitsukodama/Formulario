@@ -12,48 +12,42 @@ app.use(express.static(__dirname + '/src/public'));
 app.use(express.static(__dirname + '/src/views'));
 app.use('/', teste);
 app.use(express.urlencoded({extended: false}))
-/*
-const mongoose = require('mongoose')
-mongoose.Promise = global.Promise
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://tiago:<password>@cluster0.9ftg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  console.log('aqui foi')
-  client.close();
-});
+const mongoose = require('mongoose');
 
-const db = mongoose.connection
-db.on('error', error => console.log(error))
-db.once('open', () => console.log('Conectado Mongoose'))
+async function conectarBanco() {
 
-const testeSchema = new mongoose.Schema({
-    nome: {
-        type: String
-        },
-    idade: {
-        numero: Number
-        }
-})
+	const uri = "mongodb+srv://tiago:SenhaAtlas575@cluster0.9ftg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-const tabela = mongoose.model('tabela', testeSchema);
+	mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
-const elemento1 = new tabela({
-    nome: 'Alberto',
-    numero: 67
-})
-const elemento2 = new tabela({
-    nome: 'Alessandra',
-    numero: 88
-})
+	const Info = mongoose.model('Info', { 
+        nome: String,
+        telefone: String,
+        cep: String,
+        bairro: String,
+        rua: String 
+    });
 
-elemento1.save( () =>  console.log('salvando1'))
-elemento2.save( () =>  console.log('salvando2'))
+	const pessoa = new Info({ 
+        nome: 'boku',
+        telefone: '999999999',
+        cep: '05343060',
+        bairro: 'Jaguare',
+        rua: 'Desembargador' 
+    });
+	pessoa.save().then(() => console.log('salvo'));
+	
+	return 'ok';
+}
 
-*/
+conectarBanco()
+	.then( data => console.log(data) )
+	.catch( err => console.log(err) )
+
+
+
+
 app.listen(port, () => {
     console.log('Ouvindo')
 })
