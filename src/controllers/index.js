@@ -10,7 +10,7 @@ exports.callBack_monstrarIndex = function (req, res, next) {
 
 exports.callBack_cadastrarInformacoes = function (req, res, next) {
 
-    //addAoDB(req.body);
+    addAoDB(req.body);
     res.redirect('/informacoes');
 }
 
