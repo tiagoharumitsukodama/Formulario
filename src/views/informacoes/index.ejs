@@ -9,9 +9,29 @@
 </head>
 <body>
     <div class="containerTabela">
-        <table>
-            <tr><th>Nome</th><th>Número</th><th>CEP</th></tr>
-        </table>
+        <% if (data.length > 0) {%>  
+            <table >  
+                <thead>  
+                    <tr>  
+                        <th>  
+                            Nome  
+                        </th>  
+                        <th>  
+                            Bairro  
+                        </th> 
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    <% for(var i=0; i < data.length; i++) {%>  
+                    <tr>  
+                     <td><%= data[i].nome%></td>  
+                     <td><%= data[i].bairro%></td>  
+                    </tr>  
+                    <% } %>  
+                </tbody>  
+            </table>  
+            <% } %>  
     </div>    
 </body>
 </html>
+

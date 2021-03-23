@@ -1,8 +1,8 @@
 
-var express = require('express')
-var router = express.Router()
+let express = require('express')
+let router = express.Router()
 
-var controller_index = require('../controllers/index');
+let controller_index = require('../controllers/index');
 
 router.get('/', controller_index.callBack_monstrarIndex)
 
