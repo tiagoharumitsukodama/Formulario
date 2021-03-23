@@ -1,7 +1,13 @@
 
 const mongoose = require('mongoose');
 
-async function adicionarAoBanco() {
+function adicionarAoBanco(dados = {}) {
+
+    adicionar(dados)
+        .then( dados => console.log(dados) )
+}
+
+async function adicionar(dados) {
 
 	const uri = "mongodb+srv://tiago:SenhaAtlas575@cluster0.9ftg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
@@ -16,18 +22,15 @@ async function adicionarAoBanco() {
     });
 
 	const pessoa = new Info({ 
-        nome: 'boku',
-        telefone: '999999999',
-        cep: '05343060',
-        bairro: 'Jaguare',
-        rua: 'Desembargador' 
+        nome: dados.nome,   
+        telefone: dados.telefone,
+        cep: dados.cep,
+        bairro: dados.bairro,
+        rua: dados.rua 
     });
 	pessoa.save().then(() => console.log('salvo'));
-	
-	return 'ok';
+
+    return 'ok';
 }
 
-
-conectarBanco()
-	.then( data => console.log(data) )
-	.catch( err => console.log(err) )
+module.exports = adicionarAoBanco;
