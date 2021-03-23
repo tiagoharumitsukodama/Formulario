@@ -1,13 +1,8 @@
+const addAoDB = require('../models/cadastrar.js')
 
-
-exports.callback_index = function (req, res) {
-    res.sendFile( __dirname + '/index.html')
-
-    console.log(req.body)
-}
 
 exports.callBack_cadastrarInformacoes = function (req, res) {
 
-    console.log(req.body.nome);
+    addAoDB(req.body);
     res.send("recieved your request!");
- }
+}
