@@ -15,9 +15,8 @@ app.use(express.urlencoded({
   }))
 
 app.set("views",path.resolve(__dirname,'views'))  
+app.set('view engine','ejs')  
 
-//app.use(express.static(__dirname + '/src/public'));
-//app.use(express.static(__dirname + '/src/views'));
 
 app.use('/', indexRoute)
 app.use('/informacoes', informacoesRoute)
