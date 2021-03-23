@@ -46,6 +46,7 @@ div.conteinerFormulario input {
 div.conteinerFormulario label {
     height: 0.9rem;
     margin-bottom: 0.2rem;
+    text-align: start;
 }
 
 form > div {
