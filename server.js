@@ -1,25 +1,31 @@
-/*if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').parse()
-}
-*/
+const dotenv = require('dotenv');
+const dotenvParseVariables = require('dotenv-parse-variables');
+let env = dotenv.config({})
+
+if (env.error) throw env.error;
+    env = dotenvParseVariables(env.parsed);
+
+
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose');
 const app = express()
-const port = process.env.PORT || 3000
 const indexRoute = require('./src/routes/index.js')
 const informacoesRoute = require('./src/routes/informacoes.js')
-const loginRoute = require('./src/routes/login.js')
+const loginRoute = require('./src/routes/login.js');
+const port = process.env.PORT || env.PORT
+const uri = process.env.DATABASE_URL || env.DATABASE_URL
+
 
 app.use(express.urlencoded({
     extended: true
   }))
 
+
 app.use(express.static(__dirname + '/src/public'));
 app.set("views",path.resolve(__dirname,'src/views'))  
 app.set('view engine','ejs') 
 
-const uri = "mongodb+srv://tiago:SenhaAtlas575@cluster0.9ftg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', error => console.log(error));
