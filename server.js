@@ -6,6 +6,7 @@ if (env.error) throw env.error;
     env = dotenvParseVariables(env.parsed);
 
 
+
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose');
@@ -21,6 +22,7 @@ app.use(express.urlencoded({
     extended: true
   }))
 
+console.log(port)
 
 app.use(express.static(__dirname + '/src/public'));
 app.set("views",path.resolve(__dirname,'src/views'))  
