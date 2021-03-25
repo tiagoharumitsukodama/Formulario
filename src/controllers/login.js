@@ -8,10 +8,7 @@ exports.callBack_verificacao = function (req, res, next) {
         let resultado;
         controller_dados( req.body, resultado, (resultado,dados) => {
 
-            if( Array.isArray(dados) || dados.length )
-                resultado = dados.length
-            else
-                resultado = 0
+           resultado = dados;
 
             res(resultado)
         })

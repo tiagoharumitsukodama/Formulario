@@ -1,13 +1,20 @@
 const schema = require('./schema')
+const bcrypt = require('bcrypt')
 
 async function conectarBanco(body) {
 
     const instance = await schema.find({
-        nome: body.nome,
-        senha: body.senha
+        nome: body.nome
     })
 
-    return instance;
+    if( !instance.length )
+        return false;
+
+    const achou = await bcrypt.compare(body.senha, instance[0].senha).then(function(result) {
+        return result;
+    });
+
+    return achou;
 }
 	
 function getInformacoes(body, resultado, callbacklController) {

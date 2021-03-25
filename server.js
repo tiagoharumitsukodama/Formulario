@@ -9,7 +9,7 @@ if (env.error) throw env.error;
 
 const express = require('express')
 const path = require('path')
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const app = express()
 const indexRoute = require('./src/routes/index.js')
 const informacoesRoute = require('./src/routes/informacoes.js')

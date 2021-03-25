@@ -1,5 +1,6 @@
 
 const schema = require('./schema')
+const bcrypt = require('bcrypt')
 
 function adicionarAoBanco(dados = {}) {
 
@@ -8,6 +9,15 @@ function adicionarAoBanco(dados = {}) {
 }
 
 async function adicionar(dados) {
+
+    filtrar(dados)
+
+    const saltRounds = 10;
+    const myPlaintextPassword = dados.senha;
+
+    const encrypt = await bcrypt.hash(myPlaintextPassword, saltRounds).then( hash => {
+        dados.senha = hash
+    })
 
 	const pessoa = new schema({ 
 
@@ -20,8 +30,15 @@ async function adicionar(dados) {
     });
 
 	const novaPessoa = await pessoa.save()
-    
+
     return 'ok';
+}
+
+function filtrar(dados){
+    dados.cep = dados.cep.match(/\d/g).join('');
+    dados.telefone = dados.telefone.match(/\d/g).join('');
+
+    return dados;
 }
 
 module.exports = adicionarAoBanco;
