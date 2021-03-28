@@ -22,19 +22,23 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ### Rodar a aplicação
 
-Clone este repositório
-$ git clone <https://github.com/tiagoharumitsukodama/formulario.git>
+```bash
 
-Acesse a pasta do projeto no terminal/cmd
+# Clone este repositório
+$ git clone https://github.com/tiagoharumitsukodama/formulario.git
+
+# Acesse a pasta do projeto no terminal/cmd
 $ cd formulario
 
-Instale as dependências
+# Instale as dependências
 $ npm install
 
-Execute a aplicação em modo de desenvolvimento
+# Execute a aplicação
 $ npm run start
 
-O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
+# O servidor inciará na porta:3000 - acesse http://localhost:3000 
+
+```
 
 
 ### Tecnologias
