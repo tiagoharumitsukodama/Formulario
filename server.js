@@ -14,8 +14,7 @@ const indexRoute = require('./src/routes/index.js')
 const informacoesRoute = require('./src/routes/informacoes.js')
 const loginRoute = require('./src/routes/login.js');
 const port = process.env.PORT || 3000
-const uri = process.env.DATABASE_URL || 'mongodb+srv://tiago:SenhaAtlas575@cluster0.9ftg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-
+const uri = process.env.DATABASE_URL || env.DATABASE_URL
 
 app.use(express.urlencoded({
     extended: true
