@@ -48,3 +48,46 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Bootstrap](https://getbootstrap.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Mongodb](https://www.mongodb.com/)
+- [Ejs](https://ejs.co/)
+
+### Estrutura
+
+``` bash
+├── package.json
+├── package-lock.json
+├── README.md
+├── server.js
+└── src
+    ├── controllers
+    │   ├── index.js
+    │   ├── informacoes.js
+    │   └── login.js
+    ├── models
+    │   ├── cadastrar.js
+    │   ├── pegarDados.js
+    │   ├── schema.js
+    │   └── verificacao.js
+    ├── public
+    │   ├── images
+    │   │   ├── Banner.png
+    │   │   └── dinossauro.png
+    │   ├── script
+    │   │   └── index.js
+    │   └── style
+    │       ├── conteiners
+    │       │   ├── container_login.css
+    │       │   ├── container_tabela.css
+    │       │   ├── conteiner_apresentacao.css
+    │       │   └── conteiner_formulario.css
+    │       └── index.css
+    ├── routes
+    │   ├── index.js
+    │   ├── informacoes.js
+    │   └── login.js
+    └── views
+        ├── index.ejs
+        ├── informacoes
+        │   └── index.ejs
+        └── login
+            └── index.ejs
+```
