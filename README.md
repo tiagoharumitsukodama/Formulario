@@ -5,8 +5,6 @@
  <a href="#Pré-requisitos">Pré-requisitos</a> • 
   <a href="#Rodar a aplicação">Rodar a aplicação</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
 </p>
 
 <h1 align="center">
@@ -24,19 +22,19 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ### Rodar a aplicação
 
-# Clone este repositório
+Clone este repositório
 $ git clone <https://github.com/tiagoharumitsukodama/formulario.git>
 
-# Acesse a pasta do projeto no terminal/cmd
+Acesse a pasta do projeto no terminal/cmd
 $ cd formulario
 
-# Instale as dependências
+Instale as dependências
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
+Execute a aplicação em modo de desenvolvimento
 $ npm run start
 
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
+O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
 
 ### Tecnologias
@@ -45,4 +43,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Node.js](https://nodejs.org/en/)
-- [Mongo] (https://www.mongodb.com/)
+- [Mongodb](https://www.mongodb.com/)
