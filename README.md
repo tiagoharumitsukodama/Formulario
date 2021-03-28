@@ -2,9 +2,9 @@
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Roadmap</a> • 
+ <a href="#Pré-requisitos">Pré-requisitos</a> • 
+  <a href="#Rodar a aplicação">Rodar a aplicação</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
@@ -13,30 +13,36 @@
   <img alt="Banner" title="#Form" src="src/public/images/Banner.png" />
 </h1>
 
+### Objetivo
+Criar um formulário de cadastro simples utilizando criptografia, API de auto-preenchimento,
+banco de dados e servidor em node.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+ [Node.js](https://nodejs.org/en/).
+
+### Rodar a aplicação
+
 # Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/tiagoharumitsukodama/formulario.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
-
-# Vá para a pasta server
-$ cd server
+$ cd formulario
 
 # Instale as dependências
 $ npm install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+$ npm run start
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333> 
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
 
-### 🛠 Tecnologias
+### Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Expo](https://expo.io/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Mongo] (https://www.mongodb.com/)
