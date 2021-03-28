@@ -6,7 +6,6 @@ if (env.error) throw env.error;
     env = dotenvParseVariables(env.parsed);
 
 
-
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
@@ -14,15 +13,13 @@ const app = express()
 const indexRoute = require('./src/routes/index.js')
 const informacoesRoute = require('./src/routes/informacoes.js')
 const loginRoute = require('./src/routes/login.js');
-const port = process.env.PORT || env.PORT
+const port = process.env.PORT || 3000
 const uri = process.env.DATABASE_URL || env.DATABASE_URL
 
 
 app.use(express.urlencoded({
     extended: true
   }))
-
-console.log(port)
 
 app.use(express.static(__dirname + '/src/public'));
 app.set("views",path.resolve(__dirname,'src/views'))  
